@@ -1,0 +1,68 @@
+<core:FragmentDefinition
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m">
+	<l:Grid
+		defaultSpan="L12 M12 S12"
+		width="auto">
+		<l:content>
+		
+		<m:Toolbar height="3rem">
+			<m:Text text="Equipment" class="sapMH4FontSize" width="30%"/>
+			<m:ToolbarSpacer width="40%"/>
+			<m:Button 
+				
+				icon="sap-icon://add"
+				press=""
+				type="Default" 
+				text="Add" 
+				iconFirst="true" 
+				width="30%"/>
+				
+        </m:Toolbar>
+		
+			<Table
+				rows="{equipmentModel>/equipment}"
+				title="Room Facilities"
+				selectionMode="None"
+				>
+				<columns>
+					<Column width="11rem">
+						<m:Label text="Name" />
+						<template>
+							<m:Text text="{equipmentModel>Name}"/>
+						</template>
+					</Column>
+
+
+
+
+					<Column width="6rem" hAlign="Center">
+						<m:Label text="Status" />
+						<template>
+							<c:Icon src="{
+								path: 'equipmentModel>available',
+								formatter: 'net.zalando.townhouse.rooms.utils.Formatter.formatAvailableToIcon'
+							}"/>
+						</template>
+					</Column>
+				
+					<Column width="6rem" hAlign="Center">
+						<m:Label text="Details" />
+						<template>
+							<m:Button text="Show Details" press="handleDetailsPress"/>
+						</template>
+					</Column>
+				
+				</columns>
+			</Table>
+
+    
+	</l:content>
+	</l:Grid>
+</core:FragmentDefinition>

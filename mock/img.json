@@ -1,0 +1,9 @@
+{
+	"products": {
+		"pic1"  : "/pictures/ap6_r1_1.jpg",
+		"pic2"  : "/pictures/ap6_r1_2.jpg",
+		"pic3"  : "/pictures/ap6_r1_3.jpg",
+		"screw" : "/pictures/ap6.png",
+		"ap6"   : "/pictures/ap6.png"
+	}
+}

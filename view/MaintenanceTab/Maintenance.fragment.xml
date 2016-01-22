@@ -1,0 +1,58 @@
+<core:FragmentDefinition
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	
+	<Table id="idMaintenanceTable"
+		inset="false"
+		items="{
+			path: 'maintenanceModel>/maintenance',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Services" level="H2"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Service" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Date" />
+			</Column>
+			<Column
+				hAlign="Right">
+				<Text text="Done" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+						title="{maintenanceModel>Name}"
+						/>
+					<Text
+						text="{maintenanceModel>Date}" />
+
+
+							<c:Icon src="{
+								path: 'maintenanceModel>done',
+								formatter: 'net.zalando.townhouse.rooms.utils.Formatter.formatAvailableToIcon'
+							}"/>
+		
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

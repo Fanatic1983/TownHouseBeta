@@ -1,0 +1,1 @@
+sap.ui.core.mvc.Controller.extend("net.zalando.townhouse.rooms.view.App", {});

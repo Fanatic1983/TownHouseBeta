@@ -1,0 +1,175 @@
+<mvc:View 
+    controllerName="net.zalando.townhouse.rooms.view.Detail"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page
+        id="detailPage" 
+        navButtonPress="onNavBack" 
+        title="{i18n>detailTitle}" 
+        showNavButton="{device>/isPhone}">
+        <content>
+            <ObjectHeader 
+                id="detailHeader" 
+				title="{Name}" 
+				number="{Status}"
+				numberUnit=""
+                introActive="false" 
+                titleActive="false" 
+                iconActive="false">
+                <attributes
+                    id="detailAttributes">                
+                    <ObjectAttribute 
+                        id="attribute" 
+                        text="{i18n>detailText}" 
+                        active="false">
+                    </ObjectAttribute>
+                </attributes>
+                <firstStatus
+                    id="detailStatus">
+                    <ObjectStatus 
+                        id="status" 
+						text="Free since: {Freeon}">
+                    </ObjectStatus>
+                </firstStatus>
+            </ObjectHeader>
+            <IconTabBar 
+                id="idIconTabBar" 
+                expanded="{device>/isNoPhone}">
+    			<items 
+    			    id="detailsItems">
+                    <IconTabFilter 
+                        id="iconTabFilter1" 
+                        key="selfInfo" 
+                        text="Info"
+                        icon="sap-icon://hint">
+                        <content>
+							<f:SimpleForm 
+								id="iconTabFilter1form" 
+								minWidth="1024" 
+								editable="false" 
+								layout="ResponsiveGridLayout" 
+								labelSpanL="3" 
+								labelSpanM="3" 
+								emptySpanL="4" 
+								emptySpanM="4" 
+								columnsL="1">
+								<f:content>
+									<Label 
+										id="label1" 
+										text="Address">
+									</Label>
+									<Text 
+										id="text1"
+										text="{Address}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label2" 
+										text="Free on">
+									</Label>
+									<Text 
+										id="text2"
+										text="{Freeon}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label3" 
+										text="Occupant">
+									</Label>
+									<Text 
+										id="text3"
+										text="{Nameofoccupant}"
+										maxLines="0">
+									</Text>
+
+									
+									<core:ExtensionPoint 
+										name="extIconTabFilterForm1"/>
+								</f:content>
+								
+							</f:SimpleForm>
+										
+						<Carousel class="sapUiContentPadding" loop="true">
+                    		<pages>
+                    			<Image src="{img>/products/ap6}" alt="Location"/>
+                    		</pages>
+                    	</Carousel>									
+
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter 
+                        id="iconTabFilter2" 
+                        key="" 
+                        text="Photos"
+                        icon="sap-icon://camera">
+                        <content>
+                        
+                        <Carousel class="sapUiContentPadding" loop="true">
+                    		<pages>
+                    			<Image src="{img>/products/pic1}" alt="Example picture of room"/>
+                    
+                    			<Image src="{img>/products/pic2}" alt="Example picture of room"/>
+                    
+                    			<Image src="{img>/products/pic3}" alt="Example picture of room"/>
+                    		</pages>
+                    	</Carousel>
+                        </content>
+                    </IconTabFilter>
+                    
+                    <IconTabFilter
+						id="idPersonalSurveyTab"
+						text="Equipment"
+						icon="sap-icon://survey"
+						>
+						<content>
+							<core:Fragment fragmentName="net.zalando.townhouse.rooms.view.EquipmentTab.Equipment" type="XML" />
+						</content>
+					</IconTabFilter>
+					<IconTabFilter
+						id="idSurveyResultsTab"
+						text="Maintenance"
+						icon="sap-icon://accept"
+						>
+						<content>
+							<core:Fragment fragmentName="net.zalando.townhouse.rooms.view.MaintenanceTab.Maintenance" type="XML" />
+						</content>
+					</IconTabFilter>
+					<IconTabFilter
+					    id="idEventTab"
+						text="History"
+						icon="sap-icon://appointment">
+						<content>
+							<core:Fragment fragmentName="net.zalando.townhouse.rooms.view.ReservationHistoryTab.ResHis" type="XML" />
+						</content>
+					</IconTabFilter>
+                    
+                    
+    				<core:ExtensionPoint
+    				    name="extIconTabFilter"/>
+                </items>
+            </IconTabBar>
+    		<core:ExtensionPoint 
+    		    name="extDetail"/>
+        </content>
+        <footer
+            id="detailFooter">
+            <Toolbar id="detailToolbar">
+                <content>
+                    <ToolbarSpacer
+                        id="toolbarSpacer">
+                    </ToolbarSpacer>
+                    <Button 
+                        id="bookButton" 
+                        press="onOpenBookDialog" 
+                        text="Book this room"
+                        type="Emphasized">
+                    </Button>
+                   
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,19 @@
+{
+	"maintenance": [
+        {
+		"Name"      : "Cleaning",
+		"done"      : "yes",
+		"Date"      : "2015-10-30"
+	},
+        {
+		"Name"      : "Air Condition check",
+		"done"      : "yes",
+		"Date"      : "2015-10-29"
+	},
+        {
+		"Name"      : "Cleaning",
+		"done"       : "",
+		"Date"      : "2016-02-01"
+	}
+]
+}

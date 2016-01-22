@@ -1,0 +1,25 @@
+{
+	"equipment": [
+        {
+		"Name"  : "Projector",
+		"available"  : "yes"
+	},
+        {
+		"Name"  : "TV",
+		"available"  : ""
+	},
+        {
+		"Name"  : "Dishwasher",
+		"available"  : "yes"
+	},
+        {
+		"Name"  : "Koffee Machine",
+		"available"  : "yes"
+	},
+        {
+		"Name"  : "MIcrowave",
+		"available"  : "yes"
+	}
+
+]
+}

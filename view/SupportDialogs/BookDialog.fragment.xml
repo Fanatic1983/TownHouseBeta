@@ -1,0 +1,65 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:u="sap.ui.unified"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		title="Room reservation"
+		class="sapUiContentPadding" >
+		<content>
+		
+		<l:Grid defaultSpan="L3 M4 S6" class="sapUiSmallMarginTop">
+		<l:content>
+
+			<VBox>
+			<Label text="Select Newbie" class="labelMarginLeft" >
+            </Label>
+				
+			<ComboBox
+			        id="selectedNewbie"
+    				items="{
+    					path: 'newbieModel>/newbies',
+    					sorter: { path: 'FirstLastName' }
+    				}">
+    				<core:Item key="{newbieModel>userid}" text="{newbieModel>FirstLastName}" />
+    		</ComboBox>	
+    		</VBox>
+    		
+    		<VBox>
+			<Label
+					text="Selected From:"
+					class="labelMarginLeft" />
+			<Text
+					id="selectedDateFrom"
+					text="No Date Selected"
+					class="labelMarginLeft"/>
+            </VBox>
+            <VBox>
+			<Label
+					text="Selected To:"
+					class="labelMarginLeft" />
+			<Text
+					id="selectedDateTo"
+					text="No Date Selected"
+					class="labelMarginLeft"/>
+			</VBox>
+			</l:content>
+	</l:Grid>
+
+		<u:Calendar
+					id="calendar"
+					select="handleCalendarSelect"
+					months="3"
+					intervalSelection="true"
+					singleSelection= "true"/>
+
+			
+		</content>
+		<beginButton>
+		    <Button text="Book" type="Emphasized" press="onConfirmBookDialog" />
+		</beginButton>
+		<endButton>
+			<Button text="Close" press="onCloseBookDialog" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

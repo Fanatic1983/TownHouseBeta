@@ -1,0 +1,25 @@
+{
+	"newbies": [
+        {
+		"FirstLastName"  : "Tom Newbie",
+		"userid"  : "0001"
+	},
+        {
+		"FirstLastName"  : "Cindy Newbie",
+		"userid"  : "0001"
+	},
+        {
+		"FirstLastName"  : "Nikolau Newbie",
+		"userid"  : "0001"
+	},
+        {
+		"FirstLastName"  : "Dennis Newbie",
+		"userid"  : "0001"
+	},
+        {
+		"FirstLastName"  : "Remi Newbie",
+		"userid"  : "0001"
+	}
+
+]
+}

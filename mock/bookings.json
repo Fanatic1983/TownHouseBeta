@@ -1,0 +1,30 @@
+{
+	"bookings": [
+        {
+		"Name"  : "Tom Newbie",
+		"startDate"  : "2015-08-01",
+		"endDate"  : "2015-08-31"
+	},
+        {
+		"Name"  : "Maria Newbie",
+		"startDate"  : "2015-09-01",
+		"endDate"  : "2015-09-15"
+	},
+        {
+		"Name"  : "Oliver Newbie",
+		"startDate"  : "2015-10-01",
+		"endDate"  : "2015-10-31"
+	},
+        {
+		"Name"  : "Rene Newbie",
+		"startDate"  : "2015-11-01",
+		"endDate"  : "2015-12-31"
+	},
+        {
+		"Name"  : "John Newbie",
+		"startDate"  : "2016-01-01",
+		"endDate"  : "2016-03-01"
+	}
+
+]
+}
